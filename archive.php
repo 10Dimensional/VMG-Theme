@@ -5,10 +5,16 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package VMG_theme
+ * 
+ * Template Name: Blog
  */
 
 get_header(); ?>
-
+<div class="page-image-top">
+	     <div class="home-image-inner">
+	         <h1 style="width: 750px;">KNOWLEDGE CENTER</h1>
+	     </div>
+</div>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 

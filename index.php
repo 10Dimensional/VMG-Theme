@@ -12,10 +12,14 @@
  */
 
 get_header(); ?>
-
+<div class="page-image-top blog-image">
+	     <div class="home-image-inner">
+	         <h1 style="width: 750px;">KNOWLEDGE CENTER</h1>
+	     </div>
+</div>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+	<div class="the-posts">
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
@@ -38,9 +42,11 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 
 		<?php endif; ?>
-
+	</div>
+	<div id="sidebar">
+	    	<?php dynamic_sidebar( 'sidebar-2' ); ?>
+	</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

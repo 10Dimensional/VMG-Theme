@@ -1,6 +1,8 @@
 <?php
 /**
  * @package VMG_theme
+ * 
+ * Template Name: Blog Post
  */
 ?>
 
