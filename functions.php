@@ -118,13 +118,13 @@ function vmg_theme_scripts() {
 	
 	$raleway_cdn = 'https://fonts.googleapis.com/css?family=Raleway:800,900';
 	
-	$oxygen_cdn = 'http://fonts.googleapis.com/css?family=Oxygen:700,400';
+	$oxygen_cdn = 'https://fonts.googleapis.com/css?family=Oxygen:700,400';
  	
 	wp_enqueue_style( 'vmg_theme-style', get_stylesheet_uri() );
 	
-	wp_enqueue_style( 'vmg_theme-bootstrap', get_template_directory_uri() . '/css/custom.css' , array(), '3.3.1');
+	wp_enqueue_style( 'vmg_theme-custom', get_template_directory_uri() . '/css/custom.css' , array(), '3.3.1');
 	
-	wp_enqueue_style( 'vmg_theme-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' , array(), '3.3.1');
+	wp_enqueue_style( 'vmg_theme-component', get_template_directory_uri() . '/css/component.css');
 	
 	wp_enqueue_style( 'vmg_theme-fontAwesome', $fontAwesome_cdn, array(), '4.2.0', true );
 	
@@ -195,5 +195,11 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+function new_excerpt_more($more) {
+       global $post;
+	return '<br><br><a class="moretag" href="'. get_permalink($post->ID) . '"> READ MORE<i class="fa fa-arrow-circle-right"></i></a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 

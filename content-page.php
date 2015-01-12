@@ -9,7 +9,7 @@
 <?php get_header(); ?>
 <div class="page-image-top">
 	     <div class="home-image-inner">
-	         <h1>WHY VMG?</h1>
+	         <h1><?php echo the_title(); ?> </h1>
 	     </div>
 </div>
 <article class="inside-page" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

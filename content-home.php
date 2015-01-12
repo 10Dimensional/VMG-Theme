@@ -37,7 +37,7 @@ tempore exercitation, fuguit nolor incididunt minimum, xercitation ad nostrud qu
 ullamco quism fuguit exercitation ad nostrud. Ullamco do eiusmod  magna fuguit incididunt.</p>
 			 <p class="strong">Nolor elit sed illio veniam est quid incididunt minimum veniam ullamco quism.</p>
 	         <div class="home-inner-links">
-	             <a href="#">Learn more<i class="fa fa-arrow-circle-right"></i></a>
+	             <a href="/about-vmg">Learn more<i class="fa fa-arrow-circle-right"></i></a>
 	         </div>
 	     </div>
     </div>
@@ -48,13 +48,13 @@ ullamco quism fuguit exercitation ad nostrud. Ullamco do eiusmod  magna fuguit i
 	      	</div>
 	      	<div class="services-list">
 	      		<ul>
-	      			<li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/wrench.png" width="100"></a></li>
-	      			<li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/drop.png" width="100"></a></li>
-	      			<li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/tree.png" width="100"></a></li>
-	      			<li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/lightbulb.png" width="100"></a></li>
-	      			<li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/trash.png" width="100"></a></li>
-	      			<li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/key.png" width="100"></a></li>
-	      			<li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/bug.png" width="100"></a></li>
+	      			<li><a href=""><p class="service-icon large"><i class="fa fa-wrench fa-4x"></i></p></a></li>
+	      			<li><a href=""><p class="service-icon large"><i class="fa fa-paint-brush fa-4x"></i></p></a></li>
+	      			<li><a href=""><p class="service-icon large"><i class="fa fa-tree fa-4x"></i></p></a></li>
+	      			<li><a href=""><p class="service-icon large"><i class="fa fa-lightbulb-o fa-4x"></i></p></a></li>
+	      			<li><a href=""><p class="service-icon large"><i class="fa fa-trash fa-4x"></i></p></a></li>
+	      			<li><a href=""><p class="service-icon large"><i class="fa fa-key fa-4x"></i></p></a></li>
+	      			<li><a href=""><p class="service-icon large"><i class="fa fa-bug fa-4x"></i></p></a></li>
 	      		</ul>
 	      	</div>
 	     </div>
@@ -66,26 +66,21 @@ ullamco quism fuguit exercitation ad nostrud. Ullamco do eiusmod  magna fuguit i
 	      		<div class="copy-cta">
 	      			<h1>Commercial</h1>
 	      			<p>Dolor magna fuguit incididunt minimum veniam ullamco do eiusmod tempore exercitation. Nolor elit sed labore, magna fuguit minimum veniam ullamco do eiusmod tempore exercitation ad nostrud labore magna elit. Veniam ullamco quism do eiusmod tempore exercitation nostrud labore magna veniam. Nolor elit sed illio est quid incididunt, elit sed illio veniam est quid.</p>
-	      			<a href="">More<i class="fa fa-arrow-circle-right"></i></a>
+	      			<a href="/services/commercial">More<i class="fa fa-arrow-circle-right"></i></a>
 	      		</div>
 	      	</div>
-	      	<div class="right"> 
+	      	<div class="right">
+	      		<img class="mobile" src="<?php bloginfo('template_url'); ?>/images/house.png" width="280"> 
 	      		<div class="copy-cta">
-	      			<h1 style="margin-left: 550px;">Residential</h1>
+	      			<h1 style="margin-left: 550px;" class="residential">Residential</h1>
 	      			<p>Dolor magna fuguit incididunt minimum veniam ullamco do eiusmod tempore exercitation. Nolor elit sed labore, magna fuguit minimum veniam ullamco do eiusmod tempore exercitation ad nostrud labore magna elit. Veniam ullamco quism do eiusmod tempore exercitation nostrud labore magna veniam. Nolor elit sed illio est quid incididunt, elit sed illio veniam est quid.</p>
-	      			<a href="">More<i class="fa fa-arrow-circle-right"></i></a>
+	      			<a href="/services/residential">More<i class="fa fa-arrow-circle-right"></i></a>
 	      		</div>
-	      		<img src="<?php bloginfo('template_url'); ?>/images/house.png" width="280">
+	      		<img class="desktop" src="<?php bloginfo('template_url'); ?>/images/house.png" width="280">
 	      	</div>
 	     </div>
     </div>
 		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'vmg_theme' ),
-				'after'  => '</div>',
-			) );
-		?>
 	</div><!-- .entry-content -->
 
 <?php get_footer(); ?>

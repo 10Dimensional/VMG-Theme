@@ -1,29 +1,26 @@
-<?php
-/**
- * @package VMG_theme
- */
+<?php $image = get_field('post_image');
+	  $title = get_the_title();
+	  $author = get_the_author();
+	  $date = get_the_date();
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<?php echo '<div class="page-image-top post-title" style="background-image: url('.$image["url"].');">
+	     <div class="home-image-inner">
+	         <h1>'.$title.'</h1>
+	         <p class="author-date">'.$author.' | '.$date.'</p>
+	     </div>
+</div>' ?>
+<article class="inside-page" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<!--<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
-			<?php vmg_theme_posted_on(); ?>
-		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
-
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'vmg_theme' ),
-				'after'  => '</div>',
-			) );
-		?>
 	</div><!-- .entry-content -->
-
+	<div id="sidebar">
+	    	<?php dynamic_sidebar( 'sidebar-2' ); ?>
+	</div>
+<?php get_footer(); ?>
 	<footer class="entry-footer">
-		<?php vmg_theme_entry_footer(); ?>
+		<?php edit_post_link( __( 'Edit', 'vmg_theme' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
